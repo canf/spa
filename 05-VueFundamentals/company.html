@@ -4,6 +4,18 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+<center>
+<div class=”border-box” id="app">
+
+<b>{{company.toUpperCase()}}</b><br>
+{{address}}<br>
+{{postcode}} {{city}}<br>
+tel. {{landline}}, {{mobile}}<br>
+<a :href="web">http://www.unikpol.pl</a>
+
+
+</div>
+</center>
   <script>
     var app = new Vue({
       el: '#app',
@@ -18,6 +30,22 @@
       }
     });
   </script>
+<style>
+div {
+  height: 100px;
+  width: 400px;
 
+  padding: 10px;
+  border: solid 2px black;
+  margin: 20px;
+}
+
+.content-box {
+  box-sizing: content-box
+}
+
+.border-box {
+  box-sizing: border-box;
+}</style>
 </body>
 </html>
